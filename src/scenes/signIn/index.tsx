@@ -26,21 +26,33 @@ const SignInPage = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.emailInputWrapper}>
             <p>メールアドレス</p>
-            <input name="account.email" ref={register} />
+            <input
+              className={styles.input}
+              type="email"
+              name="account.email"
+              ref={register}
+              placeholder="coadmap@mail.com"
+              />
           </div>
           <div className={styles.passwordInputWrapper}>
             <p>パスワード</p>
-            <input name="account.password" ref={register} />
+            <input
+              className={styles.input}
+              type='password'
+              name="account.password"
+              ref={register}
+              placeholder="パスワードを入力"
+              />
           </div>
           <div className={styles.loginButtonWrapper}>
-            <button>ログイン</button>
+            <button className={styles.button}>ログイン</button>
           </div>
         </form>
-        <div className={styles.linkToForgetPasswordWrapper}>
-          <Link to="/">パスワードを忘れた方はこちら</Link>
+        <div className={styles.forgetPasswordWrapper}>
+          <a href="">パスワードを忘れた方はこちら</a>
         </div>
         <div className={styles.signupWrapper}>
-          <button>新規登録はこちら</button>
+          <button className={styles.button}>新規登録はこちら</button>
         </div>
       </div>
     </div>
